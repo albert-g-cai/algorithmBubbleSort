@@ -17,7 +17,7 @@ func BubbleSort(arr *[10]int){
 			}
 		}
 	}
-	fmt.Println("First round sort arr=", (*arr))
+	fmt.Println("After the sorting arr=", (*arr))
 }
 
 func main(){
