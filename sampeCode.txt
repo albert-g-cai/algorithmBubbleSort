@@ -1,0 +1,29 @@
+package main
+
+import("fmt")
+
+//bubble sort
+func BubbleSort(arr *[10]int){
+	fmt.Println("Before sorting the array arr=", (*arr))
+	temp:=0//temp var used for exchange the values
+
+	for i:=0;i<len(*arr)-1; i++{
+		for j:=0; j<len(*arr)-1;j++{
+			if (*arr)[j] > (*arr)[j+1]{
+				//exchange
+				temp = (*arr)[j]
+				(*arr)[j]=(*arr)[j+1]
+				(*arr)[j+1]=temp
+			}
+		}
+	}
+	fmt.Println("First round sort arr=", (*arr))
+}
+
+func main(){
+	//define arrary
+	arr := [10]int{100,22,60,98,576,12,1, 50,5, 89}
+
+	//pass the array to the function BubbleSort
+	BubbleSort(&arr)
+}
